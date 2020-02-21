@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AircraftVisualizer", "GmapTest\AircraftVisualizer.csproj", "{1BCFCB73-8F38-426A-8381-781A81D86204}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3A574F0A-338E-4591-9CD6-1A552B5A5612}"
+	ProjectSection(SolutionItems) = preProject
+		idl\HelloWorldData.idl = idl\HelloWorldData.idl
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BCFCB73-8F38-426A-8381-781A81D86204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BCFCB73-8F38-426A-8381-781A81D86204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BCFCB73-8F38-426A-8381-781A81D86204}.Debug|x64.ActiveCfg = Debug|x64
+		{1BCFCB73-8F38-426A-8381-781A81D86204}.Debug|x64.Build.0 = Debug|x64
+		{1BCFCB73-8F38-426A-8381-781A81D86204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BCFCB73-8F38-426A-8381-781A81D86204}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BCFCB73-8F38-426A-8381-781A81D86204}.Release|x64.ActiveCfg = Release|x64
+		{1BCFCB73-8F38-426A-8381-781A81D86204}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B15F24E-CC3D-465B-B813-FAAF9E7D2989}
+	EndGlobalSection
+EndGlobal

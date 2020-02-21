@@ -1,0 +1,107 @@
+/**
+ * @addtogroup examplesdcpsHelloWorldisocpp
+ */
+/** @{*/
+/** @file */
+
+module HelloWorldData
+{
+   struct Msg
+   {
+      /** User ID */
+      long userID;
+      /**  message */
+      string message;
+	  double longitude_ul;
+	  double lattitued_ul;
+	  double longitude_lr;
+	  double lattitude_lr;
+
+   };
+   #pragma keylist Msg userID
+};
+
+// BALSA IDL
+// FACE Data redefines
+typedef Unsigned long AircraftID;
+typedef string Tail_Number;
+// FIX ---         FACE::DM::Duration time;
+typedef double Duration;
+// FACE:DM Structs redefined to use IDL Formats.
+
+
+// ATC_Data
+
+// Aircraft
+struct Aircraft
+{
+    Tail_Number tailNumber;
+    AircraftID aircraftID;
+};
+
+module DM
+{
+    struct l_WGS84
+    {
+        double Altitude;
+        double Latitude;
+        double Longitude;
+
+    };
+    typedef double WGS84Altitude;
+    typedef double WGS84Latitude;
+    typedef double WGS84Longitude;
+
+    struct EGI_Data
+    {
+        l_WGS84 position;
+        Duration time;
+    };
+    // No key fields so this is a singleton
+    #pragma keylist EGI_Data 
+
+// ATC DATA
+    struct ATC_Data
+    {
+        AircraftID aircraftID;
+        Tail_Number tailNumber;
+        l_WGS84 position;
+        Duration time;
+    };
+    #pragma keylist ATC_Data
+
+    //ATC_Function
+        struct ATC_Function
+        {
+            Tail_Number tailNumber;
+            l_WGS84 position;
+            Duration time;
+            AircraftID aircraftID;
+            EGI_Data sensor;
+            Aircraft aircraft;
+        };
+        #pragma keylist ATC_Function
+
+
+        // Aircraft
+        struct Aircraft
+        {
+            Tail_Number tailNumber;
+            AircraftID aircraftID;
+
+        };
+        #pragma keylist Aircraft
+
+
+        // Aircraft Config
+        struct Aircraft_Config
+        {
+            AircraftID aircraftID;
+            Tail_Number tailNumber;
+        };
+        #pragma keylist Aircraft_Config
+
+}; // end of module DM
+
+
+/** @}*/
